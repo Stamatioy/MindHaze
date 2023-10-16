@@ -1,0 +1,49 @@
+.topCat {
+    position: relative;
+  }
+  .topCat img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .topCat .nametop {
+    position: relative;
+    width: 100%;
+  }
+  .topCat .nametop span {
+    background: #000000;
+    color: #ffde59;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin: 5px;
+    position: absolute;
+    top: 10px;
+  }
+  .topCat .nametop .tleft {
+    left: 0;
+  }
+  .topCat .nametop .tright {
+    background-color: aliceblue;
+    color: black;
+    position: absolute;
+    right: 0;
+  }
+
+  /* Container that will wrap all the Tdata items */
+.containerr {
+  display: flex;          /* Activate Flexbox for horizontal layout */
+  overflow-x: auto;       /* Allow horizontal scrolling if items overflow the container width */
+  gap: 20px;              /* Optional: spacing between items */
+  justify-content: center;
+}
+
+.box.product {
+  width: 30%;         /* This means: don't grow, don't shrink, and base size on content */
+}
+.box.product img{
+  display: block;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 20px;       /* This means: don't grow, don't shrink, and base size on content */
+}

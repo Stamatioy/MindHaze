@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+.background {
+  background-color: #f6f9fc;
+  padding: 50px 0;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+.d_flex{
+  display: flex;
+  justify-content: space-between;
+}
+.c_flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f_flex{
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.RText{
+  text-align: right;
+}
+input, button{
+  border: none;
+  outline: none;
+  background-color: none;
+}
+.row {
+  width: 50%;
+}
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #222222;
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+.boxShadow {
+  box-shadow: rgb(43 52 69 / 10%) 0 4px 16px;
+}
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: #ffde59;
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #000000;
+}
+/*---------------------------------category--------------------------------*/
+.contentWidth {
+  width: 77%;
+}
+.category {
+  width: 23%;
+  box-shadow: rgb(43 52 69 / 10%) 0 4px 16px;
+  height: 510px;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.category img {
+  width: 30px;
+  height: 30px;
+  margin-top: -3px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+.caegory span {
+  margin: 10px 20px;
+  text-transform: capitalize;
+}
+.category .box {
+  transition: 0.5s;
+  padding: 5px 20px;
+}
+.category .box:hover {
+  background-color: #f6f9fc;
+  cursor: pointer;
+
+}
+/*---------------------------------category--------------------------------*/
+.btn-primary {
+  background-color: #ffde59;
+  padding: 13px 40px;
+  font-weight: bold;
+  color: #000000;
+  border-radius:  5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 17px 20px;
+}
+.top {
+  margin-top: 80px;
+}
+.mtop {
+  margin-top: 40px;
+}
+.heading i {
+  color: #ffde59;
+  font-size: 24px;
+  margin: 10px;
+  margin-top: -1px;
+  display: inline-block; /* Ensure the circular border fits around the icon */
+  background: black; /* border: 2px solid black;*/
+  border-radius: 50%; /* Make the border circular by setting the border-radius to 50% */
+  padding: 7px;
+}
+/*---------------------------------product--------------------------------*/
+/*Plus Animation */
+
+/*Plus Animation */
+
+.product {
+  background: #fff;
+  padding:  20px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgba(30, 30, 30, 0.1) 0 1px 3px;
+  margin: 10px;
+}
+.product h3 {
+  font-weight: 400;
+  font-size: 17px;
+}
+.product .rate i {
+  font-size: 15px;
+  color: #ffde59;
+  margin: 5px 5px 5px 0;
+}
+.product .price {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+}
+
+.product button {
+  background: none;
+  color:#ffde59;
+  font-size: 20px;
+  border: 1px solid black;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  transition: 0.5s;
+  transition: color 0.05s, background 0.05s;
+}
+.product button .fa-plus {
+  transition: color 0.5s;
+}
+.product button .fa-plus.clicked {
+  color: black;
+}
+.product button:hover {
+  cursor: pointer;
+  background: #ffde59;
+  color: #ffffff;
+}
+.product button:active {
+  animation-name: changeColorOnClick;
+  animation-duration: 1s;
+}
+
+.product-like {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.product-like label {
+  background-color: rgb(0, 0, 0);
+  padding: 1px 10px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 50px;
+}
+.product-like i {
+  font-size: 20px;
+  margin: 10px 3px;
+}
+.product:hover .product-like {
+  opacity: 1;
+  cursor: pointer;
+}
+/*---------------------------------product--------------------------------*/
+/*---------------------------------cntr-btn--------------------------------*/
+.control-btn .next,
+.control-btn .prev {
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  background-color: black;
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 5;
+}
+.control-btn .next {
+  left: -20px;
+}
+.control-btn .prev {
+  right: -20px;
+}
+.control-btn .next i,
+.control-btn .prev i{
+  font-size: 20px;
+  transition: 0.5s;
+  color: #fff;
+}
+.control-btn .next:hover,
+.control-btn .prev:hover {
+  background: #ffde59;
+  cursor: pointer;
+}
+.control-btn .next:hover i,
+.control-btn .prev:hover i{
+  color: #000000;
+  cursor: pointer;
+}
+/*------arrows for new arrivals-------*/
+.control-btn .nextt,
+.control-btn .prevv {
+  display: flex;               /* Convert container into a flex container */
+  justify-content: center;    /* Center children horizontally */
+  align-items: center; 
+  
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 5;
+  border: 3px solid #ffde59;
+}
+.control-btn .nextt {
+  left: -20px;
+}
+.control-btn .prevv {
+  right: -1px;
+}
+.control-btn .nextt i,
+.control-btn .prevv i{
+  font-size: 20px;
+  transition: 0.5s;
+  color: #000000;
+}
+.control-btn .nextt:hover,
+.control-btn .prevv:hover {
+  background: #ffde59;
+  cursor: pointer;
+}
+.control-btn .nextt:hover i,
+.control-btn .prevv:hover i{
+  color: #ffffff;
+  cursor: pointer;
+}
+/*------arrows for new arrivals-------*/
+/*---------------------------------cntr-btn--------------------------------*/
+/*---------------------------------heading--------------------------------*/
+.heading .heading-left i {
+  font-size: 30px;
+}
+.heading .heading-left h2 {
+  font-size: 25px;
+  margin: 5px;
+}
+.heading .heading-right,
+.heading .heading-right i {
+  text-align: right;
+  color: grey;
+}
+/*---------------------------------heading--------------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+
+
+
+
+
+
+
+
