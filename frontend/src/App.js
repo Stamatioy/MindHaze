@@ -2,13 +2,13 @@ import './App.css';
 import Header from "./common/header/Header";
 import Footer from "./common/footer/Footer";
 import Cart from "./common/cart/Cart"
-import { BrowserRouter as Router, Switch, Route, Link ,} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link , useLocation } from "react-router-dom";
 import Pages from "./pages/Pages"
 import Data from "./components/FlashDeals/Data"
 import Sdata from "./components/shop/Sdata"
 import SingleProduct from "./components/SingleProduct/SingleProduct"
 import Shop from "./components/shop/Shop"
-
+import LoginSignup from "./components/LoginSignup/LoginSignup"
 import {useState} from "react"
 
 function App() {
@@ -35,28 +35,37 @@ function App() {
       setCartItem(cartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1} : item)))
     }
   }
+
   return (
-    <>
-      
-      <Router>
-        <Header cartItem={cartItem}/>
-        <Switch>
-          <Route path="/" exact>
-            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
-          </Route>
-          <Route path="/cart" exact>
-            <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
-          </Route>
-          <Route path="/product/:id" exact>
-            <SingleProduct shopItems={shopItems} addToCart={addToCart} />
-          </Route>
-          <Route path="/products/snus/" exact>
-            <Shop shopItems={shopItems} addToCart={addToCart}/>
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/login" exact>
+          <LoginSignup />
+        </Route>
+        
+        {/* For all other routes, render with header and footer */}
+        <Route render={() => (
+          <>
+            <Header cartItem={cartItem}/>
+            <Switch>
+              <Route path="/" exact>
+                <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
+              </Route>
+              <Route path="/cart" exact>
+                <Cart cartItem={cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
+              </Route>
+              <Route path="/product/:id" exact>
+                <SingleProduct shopItems={shopItems} addToCart={addToCart} />
+              </Route>
+              <Route path="/products/snus/" exact>
+                <Shop shopItems={shopItems} addToCart={addToCart}/>
+              </Route>
+            </Switch>
+            <Footer />
+          </>
+        )}/>
+      </Switch>
+    </Router>
   );
 }
 
